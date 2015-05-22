@@ -19,7 +19,13 @@
   letter-spacing: 2px;
   color: white;
   text-align: left;
-  padding: 70px;
+  padding: 0px;
   background: rgba(0,0,0,0.5);
   display: block;
 }
+
+#pages {
+	
+	background-color: black;
+}
+
