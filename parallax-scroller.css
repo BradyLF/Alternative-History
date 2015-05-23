@@ -56,7 +56,7 @@ font-size: 70px;
   text-align: left;
   padding-left: 70px;
     padding-right: 70px;
-  background: rgba(0,0,0,0.3);
+
   display: block;
 }
 
@@ -72,7 +72,7 @@ h5 {
   text-align: left;
   padding-left: 70px;
   padding-right: 70px;
-  background: rgba(0,0,0,0.3);
+
   display: block;
 }
 
@@ -84,7 +84,6 @@ h4 {
   color: white;
   text-align: left;
   padding-left: 70px;
-  background: rgba(0,0,0,0.3);
   display: block;
 }
 
@@ -95,7 +94,7 @@ h5:hover {
 }
 #pages {
 	
-	background-color: black;
+	background-color: #2e2e2e;
 }
 
 
