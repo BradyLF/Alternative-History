@@ -77,12 +77,12 @@ h5 {
 }
 
 h4 {
-  font-size: 26px;
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2px;
-  color: white;
-  text-align: left;
+  color: black;
+  text-align: center;
   padding-left: 70px;
   display: block;
 }
