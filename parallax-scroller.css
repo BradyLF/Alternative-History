@@ -1,7 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400italic);
+
 .whatif{
-	
+	font-style: italic;
 	padding-bottom: 0px;
 	padding-top: 0px;
+	font-family: 'Noto Serif', serif;
 }
 
 .title{
