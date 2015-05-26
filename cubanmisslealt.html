@@ -1,461 +1,447 @@
 <!doctype html>
 <!--
-Copyright (©) 2015 Brady Africk
-	
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
-	
-	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Credit must be directly given to Brady Africk for the intellelectual property on this website and the code itself, even if modified, as well Pete Rojwongsuriya for authoring the parallax-scroller included with this software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
--->
+   Copyright (©) 2015 Brady Africk
+   	
+   	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+   	
+   	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Credit must be directly given to Brady Africk for the intellelectual property on this website and the code itself, even if modified, as well Pete Rojwongsuriya for authoring the parallax-scroller included with this software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+   -->
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>The Cuban Missile Actuality</title>
-	<meta name="title" content="What it were different? | Alternative History" />
-	<meta name="description" content="A take on history and the ripple effect caused by small, yet pivotal changes" />
-	<link rel="image_src" href="/images/parallax-scroller_image.png" />
-
-	<meta content="http://whatifitweredifferent.com" property="og:url" />
-	<meta content="http://whatifitweredifferent.com/images/favicon.png" property="og:image" />
-	<link rel="shortcut icon" id="favicon" href="/images/favicon.png"> 
-	<meta name="author" content="Brady Africk">
-	<link rel="stylesheet" type="text/css" href="altstyle.css" />
-	<link rel="canonical" href="http://whatifitweredifferent.com" />
-  <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400italic' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script type="text/javascript" src="jquery.parallax-scroller.js"></script>  
-  <style>
-    html {
-      height: 100%;
-    }
-    body {
-      background: #fff;
-      padding: 0;
-      text-align: center;
-      font-family: 'Open Sans';
-      position: relative;
-      margin: 0;
-      height: 100%;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizelegibility;
-    }
-    
-    a {
-      color: black;
-    }
-    
-    .header {
-      padding: 30px 0 0;
-      float: left;
-      width: 100%;
-      background: white;
-    }
-    
-    .wrapper {
-    	height: auto !important;
-    	height: 100%;
-    	margin: 0 auto; 
-    	overflow: hidden;
-    }
-    
-    a {
-      text-decoration: none;
-    }
-    
-    
-    h1, h2 {
-      width: 100%;
-      float: left;
-    }
-    h1 {
-      margin-top: 100px;
-      color: #999;
-      margin-bottom: 5px;
-      font-size: 70px;
-      font-weight: 100;
-    }
-    h2 {
-      padding: 00px 20px 30px 20px;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      letter-spacing: 0px;
-      color: #888;
-      font-size: 20px;
-      line-height: 160%;
-      font-weight: 100;
-      margin-top: 10px;
-      margin-bottom: 0;
-    }
-    
-    
-    .pointer {
-      color: #00B0FF;
-      font-family: 'Pacifico';
-      font-size: 24px;
-      margin-top: 15px;
-      position: absolute;
-      top: 130px;
-      right: -40px;
-    }
-    .pointer2 {
-      color: #00B0FF;
-      font-family: 'Pacifico';
-      font-size: 24px;
-      margin-top: 15px;
-      position: absolute;
-      top: 130px;
-      left: -40px;
-    }
-    pre {
-      margin: 80px auto;
-    }
-    pre code {
-      padding: 35px;
-      border-radius: 5px;
-      font-size: 15px;
-      background: rgba(0,0,0,0.1);
-      border: rgba(0,0,0,0.05) 5px solid;
-      max-width: 500px;
-    }
-
-
-    .main {
-      float: left;
-      width: 100%;
-      margin: 0 auto;
-    }
-    
-    
-    .main h1 {
-      padding:20px 50px 10px;
-      float: left;
-      width: 100%;
-      font-size: 60px;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      font-weight: 100;
-      margin: 0;
-      padding-top: 25px;
-      font-family: 'Open Sans';
-      letter-spacing: -1px;
-      text-transform: capitalize;
-    }
-   
-    .main h1.demo1 {
-      background: #1ABC9C;
-    }
-    
-    .reload.bell {
-      font-size: 12px;
-      padding: 20px;
-      width: 45px;
-      text-align: center;
-      height: 47px;
-      border-radius: 50px;
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
-    }
-    
-    .reload.bell #notification {
-      font-size: 25px;
-      line-height: 140%;
-    }
-    
-    .reload, .btn{
-      display: inline-block;
-      border-radius: 3px;
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      display: inline-block;
-      line-height: 100%;
-      padding: 0.7em;
-      text-decoration: none;
-      width: 100px;
-      line-height: 140%;
-      font-size: 17px;
-      font-family: Open Sans;
-      font-weight: bold;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      background-color: #4D90FE;
-      background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
-      background-image: linear-gradient(top,#4d90fe,#4787ed);
-      border: 1px solid #3079ED;
-      color: #FFF;
-    }
-    .reload:hover{
-      background: #317af2;
-    }
-    .btn {
-      width: 200px;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      background-color: #4D90FE;
-      background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
-      background-image: linear-gradient(top,#4d90fe,#4787ed);
-      border: 1px solid #3079ED;
-      color: #FFF;
-    }
-    .clear {
-      width: auto;
-    }
-    .btn:hover, .btn:hover {
-      background: #317af2;
-    }
-    .btns {
-      width: 410px;
-      margin: 50px auto;
-    }
-    .credit {
-      text-align: center;
-      color: #888;
-      padding: 10px 10px;
-      margin: 0 0 0 0;
-      float: left;
-      width: 100%;
-    }
-    .credit a {
-      text-decoration: none;
-      font-weight: bold;
-      color: black;
-    }
-    
-    .back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      text-align: center;
-      display: block;
-      padding: 7px;
-      width: 100%;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      background:#f5f5f5;
-      font-weight: bold;
-      font-size: 13px;
-      color: #888;
-      -webkit-transition: all 200ms ease-out;
-      -moz-transition: all 200ms ease-out;
-      -o-transition: all 200ms ease-out;
-      transition: all 200ms ease-out;
-    }
-    .back:hover {
-      background: #eee;
-    }
-  
-    
-    
-    .page-container {
-      float: left;
-      width: 100%;
-      margin: 0 auto 300px;
-      position: relative;
-    }
-    
-    .header {
-      overflow: hidden;
-      clear: both;
-    }
-    
-    .bg {
-      position: absolute;
-      min-height: 100% !important;
-      width: 100%;
-      z-index: 0;
-    }
-    
-    .ibg-bg {
-      position: absolute;
-    }
-    #btns {
-      text-align: center;
-      margin: 50px auto;
-      height: 50px;
-      overflow: hidden;
-      float: left;
-      width: 100%;
-    }
-    
-    
-    .main {
-      position: relative;
-    }
-    
-    .ps-list {
-      float: left;
-      width: 100%;
-    }
-    
-	</style>
-	<script>
-	  $(document).ready(function(){
-       $(".list").parallaxScroller({
-         parallaxSpeed: 0.9,
-         tilt: 0,
-         startPosition: "40%"
-       });
-		});
-		
-	</script>
-</head>
-<body>
-  <div class="wrapper">
-  	  
-  	  <div class="list">
-	  	  
-  	    <div class="list-item" data-ps-bg="images/2.jpg">
-  	      <h3 class="ps-header" href="" ><br><br><br><br><br><br><center>The Cuban Missile Actuality<br><br><button onClick="location.href='index.html'" class="btn-primary">Return Home</button><br><br><br><br></center></h3>
-  	    </div>
-  	    
-  	    
-  	    <div class="list-item"><center>
-    	    <h3 class="ps-header"><br>What Really Happened  | October 14–28, 1962 </h3> 
-    	    <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis"><h5> The Cuban Missile Crisis was a 13-day confrontation in October 1962 between the United States and the Soviet Union over Soviet ballistic missiles deployed in Cuba. It played out on television worldwide and was the closest the Cold War came to escalating into a full-scale nuclear war.</h5></a>
-    	    
-  	    </center>
-    	  </div>
-    	  
-    
-    	  
-    	  
-    	  
-    	  <div class="list-item"><center>
-    	    <h3 class="ps-header"><br>The Bay of Pigs: A Failure With Horrific Backfire</h3> 
-  	       </center>
-    	  </div>
-    	  
-    	  <div class="list-item" data-ps-bg="images/7.jpg"><center>
-    	    
-    	     <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis"><h5><br><br><br><br><br><br><br>  In response to the failed Bay of Pigs Invasion of 1961, and the presence of American Jupiter ballistic missiles in Italy and Turkey against the USSR with Moscow within range, Soviet leader Nikita Khrushchev decided to agree to Cuba's request to place nuclear missiles in Cuba to deter future harassment of Cuba. An agreement was reached during a secret meeting between Khrushchev and Fidel Castro in July and construction on a number of missile launch facilities started later that summer.<br><br><br> <br><br> <br><br> </h5></a>
-    	    
-  	    </center>
-    	  </div>
-    	  
-    	  <hr>
-    	  <div class="list-item">
-    	    <h3 class="ps-header" href="" ><br>Reasons for Russia to want missiles in Cuba</h3> 
-    	    <a href="http://en.wikipedia.org/wiki/PGM-19_Jupiter"><h5>- The United States had PGM-19 Jupiter Missiles in Turkey</h5></a>
-    	    <a href="http://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion"><h5>- To deter future harassment of Cuba after the Bay of Pigs<br></h5></a>  
-    	  </div>
-    	  
-    	  <div class="list-item">
-    	    <h3 class="ps-header" href="" ><br>Responses considered</h3> 
-    	    <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis"><h5>- Do nothing: American vulnerability to Soviet missiles was not new.</h5></a>
-    	    <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis"><h5>- Diplomacy: Use diplomatic pressure to get the Soviet Union to remove the missiles.</h5></a>
-    	    <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis"><h5>- Secret approach: Offer Castro the choice of splitting with the Russians or being invaded</h5></a>  
-    	    <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis"><h5>- Invasion: Full force invasion of Cuba and overthrow of Castro.</h5></a>  
-    	    <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis"><h5>- Air strike: Use the US Air Force to attack all known missile sites.</h5></a>  
-    	    <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis"><h5>- Blockade: Use the US Navy to block any missiles from arriving in Cuba.</h5><br></a>  
-  
-    	  </div>
-
-<hr>
-
-		  	<div class="list-item">
-    	    <h3 class="ps-header" href="" >Established Timeline of Events</h3>   
-    	  </div>
-    	  
-    	  <div class="list-item">
-    	    <h4>Day 1: Tuesday, October 16</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>President Kennedy is told that the Cubans have ICBM's (InterContinental Ballistic Missile).<hr></h5></a>
-    	  </div>
-    	  
-  	    
-  	    
-  	     <div class="list-item">
-    	    <h4>DAY 2: Wednesday, October 17</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>President Kennedy discusses what he should do about the ICBM's in Cuba.<hr></h5></a>   	    
-    	  </div>
-    	  
-    	  
-    	  <div class="list-item">
-    	    <h4>DAY 3: Thursday, October 18</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>President Kennedy meets with Soviet Foreign and advises him that America will not tolerate Soviet missiles in Cuba. Gromyko denies the presence of any Soviet weaponry in Cuba.<hr></h5></a>   	    
-    	  </div>
-    	  
-    	  <div class="list-item">
-    	  <h3 class="ps-header" href="" >DAY 4: Friday, October 19 </h3> 
-    	  </div>  
-    	  <div class="list-item" data-ps-bg="images/8.jpg"><center>   
-    	     <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5><br><br> <br><br> <br>JFK meets with the Secretary of Defense, Robert McNamara, and the members of the Joint Chiefs of Staff to discuss military options.   <br> <br><br> <br><br> </h5></a>
-  	    </center>
-    	  </div>
-    	  
-    	  <div class="list-item">
-    	    <h4>DAY 5: Saturday, October 20</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>President Kennedy returns to Washington to discuss the discovery of additional Soviet missiles in Cuba. <hr></h5></a> 
-    	  </div>
-    	  
-    	  
-    	  <div class="list-item">
-    	    <h4>DAY 6: Sunday, October 21</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>President Kennedy orders  a naval blockade of Cuba as soon as possible. The operation is reviewed and approved.<hr></h5></a>   	    
-    	  </div>
-    	  
-    	  
-    	  <div class="list-item">
-    	    <h4>DAY 7: Monday, October 22</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>President Kennedy addresses the American public and announces his plan to implement a naval blockade of Cuba. U.S. military go into DEFCON 3.<hr></h5>
-     </div>
-     
-     <div class="list-item">
-    	    <h4>DAY 8: Tuesday, October 23</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>The OAS (Organization of American States) supports the decision to quarantine Cuba. Reconnaissance photos reveal that Soviet missiles are ready for launch. McNamara, Kennedy review and discuss options of confrontation.<hr></h5>
-     </div>
-     
-     <div class="list-item">
-    	    <h4>DAY 9: Wednesday, October 24</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>Soviet ships reach the quarantine line, but receive radio orders from Moscow to hold their positions. Detailed briefing on new reconnaissance photos from Cuba and discussion of the need to disperse planes at Florida bases in the event of attacks by MIGs based in Cuba. McNamara talks of a very dangerous situation since ships approaching the quarantine line are being shadowed by a Soviet submarine. U.S. military go into DEFCON 2, the highest in U.S. history. <hr></h5>
-     </div>
-     
-     <div class="list-item">
-    	    <h4>DAY 10: Thursday, October 25</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>U.S. Ambassador Adlai Stevenson confronts the Soviets at the U.N. but they refuse to answer. Review of the movement of ships toward the quarantine line and potential US responses.<hr></h5>
-     </div>
-     
-     <div class="list-item">
-    	    <h4>DAY 11: Friday, October 26</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>EX-COMM receives a letter from Khrushchev stating that the Soviets would remove their missiles if President Kennedy publicly guarantees the U.S. will not invade Cuba. The CIA reports that the construction of the missile sites is continuing and accelerating.<hr></h5>
-     </div>
-     
-     <div class="list-item">
-    	    <h4>DAY 12: Saturday, October 27</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>While one U-2 spy plane accidentally flies into Russia, while another is shot down over Cuba. EX-COMM receives a second letter from Khrushchev stating that, in addition to a public promise not to invade Cuba, the U.S. removes its missiles from Turkey.<hr></h5>
-     </div>
-     
-     <div class="list-item">
-    	    <h4>DAY 13: Sunday, October 28</h4> 
-    	    <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>The crisis is over. In a speech aired on Radio Moscow, Khrushchev announces that he has agreed to remove the ICBM's from Cuba. President Kennedy continues to enforce the quarantine until a month after the removal of missiles in Cuba.<hr></h5>
-     </div>
-     
-      
-      <div class="list-item"><center>
-    	    <h3 class="ps-header"><br>International Response </h3> 
-    	    <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis#International_response"><h5>Three days after Kennedy's speech, the Chinese People's Daily announced that "650,000,000 Chinese men and women were standing by the Cuban people." In West Germany, newspapers supported the United States' response, contrasting it with the weak American actions in the region during the preceding months. They also expressed some fear that the Soviets might retaliate in Berlin. In France on October 23, the crisis made the front page of all the daily newspapers. The next day, an editorial in Le Monde expressed doubt about the authenticity of the CIA's photographic evidence. Two days later, after a visit by a high-ranking CIA agent, they accepted the validity of the photographs. Also in France, in the October 29 issue of Le Figaro, Raymond Aron wrote in support of the American response</h5></a>
-    	    
-  	    </center>
-    	  </div>
-      
-
-
-
-    </div>
-      
-  </div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-63295286-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</body>
-
+   <head>
+      <meta charset="utf-8">
+      <title>The Cuban Missile Actuality</title>
+      <meta name="title" content="What it were different? | Alternative History" />
+      <meta name="description" content="A take on history and the ripple effect caused by small, yet pivotal changes" />
+      <link rel="image_src" href="/images/parallax-scroller_image.png" />
+      <meta content="http://whatifitweredifferent.com" property="og:url" />
+      <meta content="http://whatifitweredifferent.com/images/favicon.png" property="og:image" />
+      <link rel="shortcut icon" id="favicon" href="/images/favicon.png">
+      <meta name="author" content="Brady Africk">
+      <link rel="stylesheet" type="text/css" href="altstyle.css" />
+      <link rel="canonical" href="http://whatifitweredifferent.com" />
+      <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400italic' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script type="text/javascript" src="jquery.parallax-scroller.js"></script>  
+      <style>
+         html {
+         height: 100%;
+         }
+         body {
+         background: #fff;
+         padding: 0;
+         text-align: center;
+         font-family: 'Open Sans';
+         position: relative;
+         margin: 0;
+         height: 100%;
+         -webkit-font-smoothing: antialiased;
+         text-rendering: optimizelegibility;
+         }
+         a {
+         color: black;
+         }
+         .header {
+         padding: 30px 0 0;
+         float: left;
+         width: 100%;
+         background: white;
+         }
+         .wrapper {
+         height: auto !important;
+         height: 100%;
+         margin: 0 auto; 
+         overflow: hidden;
+         }
+         a {
+         text-decoration: none;
+         }
+         h1, h2 {
+         width: 100%;
+         float: left;
+         }
+         h1 {
+         margin-top: 100px;
+         color: #999;
+         margin-bottom: 5px;
+         font-size: 70px;
+         font-weight: 100;
+         }
+         h2 {
+         padding: 00px 20px 30px 20px;
+         box-sizing: border-box;
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         letter-spacing: 0px;
+         color: #888;
+         font-size: 20px;
+         line-height: 160%;
+         font-weight: 100;
+         margin-top: 10px;
+         margin-bottom: 0;
+         }
+         .pointer {
+         color: #00B0FF;
+         font-family: 'Pacifico';
+         font-size: 24px;
+         margin-top: 15px;
+         position: absolute;
+         top: 130px;
+         right: -40px;
+         }
+         .pointer2 {
+         color: #00B0FF;
+         font-family: 'Pacifico';
+         font-size: 24px;
+         margin-top: 15px;
+         position: absolute;
+         top: 130px;
+         left: -40px;
+         }
+         pre {
+         margin: 80px auto;
+         }
+         pre code {
+         padding: 35px;
+         border-radius: 5px;
+         font-size: 15px;
+         background: rgba(0,0,0,0.1);
+         border: rgba(0,0,0,0.05) 5px solid;
+         max-width: 500px;
+         }
+         .main {
+         float: left;
+         width: 100%;
+         margin: 0 auto;
+         }
+         .main h1 {
+         padding:20px 50px 10px;
+         float: left;
+         width: 100%;
+         font-size: 60px;
+         box-sizing: border-box;
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         font-weight: 100;
+         margin: 0;
+         padding-top: 25px;
+         font-family: 'Open Sans';
+         letter-spacing: -1px;
+         text-transform: capitalize;
+         }
+         .main h1.demo1 {
+         background: #1ABC9C;
+         }
+         .reload.bell {
+         font-size: 12px;
+         padding: 20px;
+         width: 45px;
+         text-align: center;
+         height: 47px;
+         border-radius: 50px;
+         -webkit-border-radius: 50px;
+         -moz-border-radius: 50px;
+         }
+         .reload.bell #notification {
+         font-size: 25px;
+         line-height: 140%;
+         }
+         .reload, .btn{
+         display: inline-block;
+         border-radius: 3px;
+         -moz-border-radius: 3px;
+         -webkit-border-radius: 3px;
+         display: inline-block;
+         line-height: 100%;
+         padding: 0.7em;
+         text-decoration: none;
+         width: 100px;
+         line-height: 140%;
+         font-size: 17px;
+         font-family: Open Sans;
+         font-weight: bold;
+         -webkit-box-shadow: none;
+         box-shadow: none;
+         background-color: #4D90FE;
+         background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+         background-image: linear-gradient(top,#4d90fe,#4787ed);
+         border: 1px solid #3079ED;
+         color: #FFF;
+         }
+         .reload:hover{
+         background: #317af2;
+         }
+         .btn {
+         width: 200px;
+         -webkit-box-shadow: none;
+         box-shadow: none;
+         background-color: #4D90FE;
+         background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+         background-image: linear-gradient(top,#4d90fe,#4787ed);
+         border: 1px solid #3079ED;
+         color: #FFF;
+         }
+         .clear {
+         width: auto;
+         }
+         .btn:hover, .btn:hover {
+         background: #317af2;
+         }
+         .btns {
+         width: 410px;
+         margin: 50px auto;
+         }
+         .credit {
+         text-align: center;
+         color: #888;
+         padding: 10px 10px;
+         margin: 0 0 0 0;
+         float: left;
+         width: 100%;
+         }
+         .credit a {
+         text-decoration: none;
+         font-weight: bold;
+         color: black;
+         }
+         .back {
+         position: absolute;
+         top: 0;
+         left: 0;
+         text-align: center;
+         display: block;
+         padding: 7px;
+         width: 100%;
+         box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         -webkit-box-sizing: border-box;
+         background:#f5f5f5;
+         font-weight: bold;
+         font-size: 13px;
+         color: #888;
+         -webkit-transition: all 200ms ease-out;
+         -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+         transition: all 200ms ease-out;
+         }
+         .back:hover {
+         background: #eee;
+         }
+         .page-container {
+         float: left;
+         width: 100%;
+         margin: 0 auto 300px;
+         position: relative;
+         }
+         .header {
+         overflow: hidden;
+         clear: both;
+         }
+         .bg {
+         position: absolute;
+         min-height: 100% !important;
+         width: 100%;
+         z-index: 0;
+         }
+         .ibg-bg {
+         position: absolute;
+         }
+         #btns {
+         text-align: center;
+         margin: 50px auto;
+         height: 50px;
+         overflow: hidden;
+         float: left;
+         width: 100%;
+         }
+         .main {
+         position: relative;
+         }
+         .ps-list {
+         float: left;
+         width: 100%;
+         }
+      </style>
+      <script>
+         $(document).ready(function(){
+             $(".list").parallaxScroller({
+               parallaxSpeed: 0.9,
+               tilt: 0,
+               startPosition: "40%"
+             });
+         });
+         
+      </script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="list">
+            <div class="list-item" data-ps-bg="images/2.jpg">
+               <h3 class="ps-header" href="" >
+                  <br><br><br><br><br><br>
+                  <center>The Cuban Missile Actuality<br><br><button onClick="location.href='index.html'" class="btn-primary">Return Home</button><br><br><br><br></center>
+               </h3>
+            </div>
+            <div class="list-item">
+               <center>
+                  <h3 class="ps-header"><br>What Really Happened  | October 14–28, 1962 </h3>
+                  <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis">
+                     <h5> The Cuban Missile Crisis was a 13-day confrontation in October 1962 between the United States and the Soviet Union over Soviet ballistic missiles deployed in Cuba. It played out on television worldwide and was the closest the Cold War came to escalating into a full-scale nuclear war.</h5>
+                  </a>
+               </center>
+            </div>
+            <div class="list-item">
+               <center>
+                  <h3 class="ps-header"><br>The Bay of Pigs: A Failure With Horrific Backfire</h3>
+               </center>
+            </div>
+            <div class="list-item" data-ps-bg="images/7.jpg">
+               <center>
+                  <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis">
+                     <h5><br><br><br><br><br><br><br>  In response to the failed Bay of Pigs Invasion of 1961, and the presence of American Jupiter ballistic missiles in Italy and Turkey against the USSR with Moscow within range, Soviet leader Nikita Khrushchev decided to agree to Cuba's request to place nuclear missiles in Cuba to deter future harassment of Cuba. An agreement was reached during a secret meeting between Khrushchev and Fidel Castro in July and construction on a number of missile launch facilities started later that summer.<br><br><br> <br><br> <br><br> </h5>
+                  </a>
+               </center>
+            </div>
+            <hr>
+            <div class="list-item">
+               <h3 class="ps-header" href="" ><br>Reasons for Russia to want missiles in Cuba</h3>
+               <a href="http://en.wikipedia.org/wiki/PGM-19_Jupiter">
+                  <h5>- The United States had PGM-19 Jupiter Missiles in Turkey</h5>
+               </a>
+               <a href="http://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion">
+                  <h5>- To deter future harassment of Cuba after the Bay of Pigs<br></h5>
+               </a>
+            </div>
+            <div class="list-item">
+               <h3 class="ps-header" href="" ><br>Responses considered</h3>
+               <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis">
+                  <h5>- Do nothing: American vulnerability to Soviet missiles was not new.</h5>
+               </a>
+               <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis">
+                  <h5>- Diplomacy: Use diplomatic pressure to get the Soviet Union to remove the missiles.</h5>
+               </a>
+               <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis">
+                  <h5>- Secret approach: Offer Castro the choice of splitting with the Russians or being invaded</h5>
+               </a>
+               <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis">
+                  <h5>- Invasion: Full force invasion of Cuba and overthrow of Castro.</h5>
+               </a>
+               <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis">
+                  <h5>- Air strike: Use the US Air Force to attack all known missile sites.</h5>
+               </a>
+               <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis">
+                  <h5>- Blockade: Use the US Navy to block any missiles from arriving in Cuba.</h5>
+                  <br>
+               </a>
+            </div>
+            <hr>
+            <div class="list-item">
+               <h3 class="ps-header" href="" >Established Timeline of Events</h3>
+            </div>
+            <div class="list-item">
+               <h4>Day 1: Tuesday, October 16</h4>
+               <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx">
+                  <h5>
+                     President Kennedy is told that the Cubans have ICBM's (InterContinental Ballistic Missile).
+                     <hr>
+                  </h5>
+               </a>
+            </div>
+            <div class="list-item">
+               <h4>DAY 2: Wednesday, October 17</h4>
+               <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx">
+                  <h5>
+                     President Kennedy discusses what he should do about the ICBM's in Cuba.
+                     <hr>
+                  </h5>
+               </a>
+            </div>
+            <div class="list-item">
+               <h4>DAY 3: Thursday, October 18</h4>
+               <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx">
+                  <h5>
+                     President Kennedy meets with Soviet Foreign and advises him that America will not tolerate Soviet missiles in Cuba. Gromyko denies the presence of any Soviet weaponry in Cuba.
+                     <hr>
+                  </h5>
+               </a>
+            </div>
+            <div class="list-item">
+               <h3 class="ps-header" href="" >DAY 4: Friday, October 19 </h3>
+            </div>
+            <div class="list-item" data-ps-bg="images/8.jpg">
+               <center>
+                  <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx">
+                     <h5><br><br> <br><br> <br>JFK meets with the Secretary of Defense, Robert McNamara, and the members of the Joint Chiefs of Staff to discuss military options.   <br> <br><br> <br><br> </h5>
+                  </a>
+               </center>
+            </div>
+            <div class="list-item">
+               <h4>DAY 5: Saturday, October 20</h4>
+               <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx">
+                  <h5>
+                     President Kennedy returns to Washington to discuss the discovery of additional Soviet missiles in Cuba. 
+                     <hr>
+                  </h5>
+               </a>
+            </div>
+            <div class="list-item">
+               <h4>DAY 6: Sunday, October 21</h4>
+               <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx">
+                  <h5>
+                     President Kennedy orders  a naval blockade of Cuba as soon as possible. The operation is reviewed and approved.
+                     <hr>
+                  </h5>
+               </a>
+            </div>
+            <div class="list-item">
+               <h4>DAY 7: Monday, October 22</h4>
+               <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx">
+                  <h5>
+                     President Kennedy addresses the American public and announces his plan to implement a naval blockade of Cuba. U.S. military go into DEFCON 3.
+                     <hr>
+                  </h5>
+            </div>
+            <div class="list-item">
+            <h4>DAY 8: Tuesday, October 23</h4> 
+            <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>The OAS (Organization of American States) supports the decision to quarantine Cuba. Reconnaissance photos reveal that Soviet missiles are ready for launch. McNamara, Kennedy review and discuss options of confrontation.<hr></h5>
+            </div>
+            <div class="list-item">
+            <h4>DAY 9: Wednesday, October 24</h4> 
+            <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>Soviet ships reach the quarantine line, but receive radio orders from Moscow to hold their positions. Detailed briefing on new reconnaissance photos from Cuba and discussion of the need to disperse planes at Florida bases in the event of attacks by MIGs based in Cuba. McNamara talks of a very dangerous situation since ships approaching the quarantine line are being shadowed by a Soviet submarine. U.S. military go into DEFCON 2, the highest in U.S. history. <hr></h5>
+            </div>
+            <div class="list-item">
+            <h4>DAY 10: Thursday, October 25</h4> 
+            <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>U.S. Ambassador Adlai Stevenson confronts the Soviets at the U.N. but they refuse to answer. Review of the movement of ships toward the quarantine line and potential US responses.<hr></h5>
+            </div>
+            <div class="list-item">
+            <h4>DAY 11: Friday, October 26</h4> 
+            <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>EX-COMM receives a letter from Khrushchev stating that the Soviets would remove their missiles if President Kennedy publicly guarantees the U.S. will not invade Cuba. The CIA reports that the construction of the missile sites is continuing and accelerating.<hr></h5>
+            </div>
+            <div class="list-item">
+            <h4>DAY 12: Saturday, October 27</h4> 
+            <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>While one U-2 spy plane accidentally flies into Russia, while another is shot down over Cuba. EX-COMM receives a second letter from Khrushchev stating that, in addition to a public promise not to invade Cuba, the U.S. removes its missiles from Turkey.<hr></h5>
+            </div>
+            <div class="list-item">
+            <h4>DAY 13: Sunday, October 28</h4> 
+            <a href="http://www.atomcentral.com/cuban-missile-crisis.aspx"><h5>The crisis is over. In a speech aired on Radio Moscow, Khrushchev announces that he has agreed to remove the ICBM's from Cuba. President Kennedy continues to enforce the quarantine until a month after the removal of missiles in Cuba.<hr></h5>
+            </div>
+            <div class="list-item"><center>
+            <h3 class="ps-header"><br>International Response </h3> 
+            <a href="http://en.wikipedia.org/wiki/Cuban_Missile_Crisis#International_response"><h5>Three days after Kennedy's speech, the Chinese People's Daily announced that "650,000,000 Chinese men and women were standing by the Cuban people." In West Germany, newspapers supported the United States' response, contrasting it with the weak American actions in the region during the preceding months. They also expressed some fear that the Soviets might retaliate in Berlin. In France on October 23, the crisis made the front page of all the daily newspapers. The next day, an editorial in Le Monde expressed doubt about the authenticity of the CIA's photographic evidence. Two days later, after a visit by a high-ranking CIA agent, they accepted the validity of the photographs. Also in France, in the October 29 issue of Le Figaro, Raymond Aron wrote in support of the American response</h5></a>
+            </center>
+            </div>
+         </div>
+      </div>
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-63295286-1', 'auto');
+         ga('send', 'pageview');
+         
+      </script>
+   </body>
 </html>
