@@ -1,0 +1,108 @@
+<!doctype html>
+<!--
+   Copyright (©) 2015 Brady Africk
+   	
+   	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+   	
+   	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Credit must be directly given to Brady Africk for the intellelectual property on this website and the code itself, even if modified, as well Pete Rojwongsuriya for authoring the parallax-scroller included with this software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+   -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>What if it were different? </title>
+      <meta name="title" content="What it were different? | Alternative History" />
+      <meta name="description" content="A take on history and the ripple effect caused by small, yet pivotal changes" />
+      <link rel="image_src" href="/images/parallax-scroller_image.png" />
+      <meta content="http://whatifitweredifferent.com" property="og:url" />
+      <meta content="http://whatifitweredifferent.com/images/favicon.png" property="og:image" />
+      <link rel="shortcut icon" id="favicon" href="/images/favicon.png">
+      <meta name="author" content="Brady Africk">
+      <link rel="stylesheet" type="text/css" href="parallax-scroller.css" />
+      <link rel="stylesheet" type="text/css" href="css/index.css" />
+      <link rel="canonical" href="http://whatifitweredifferent.com" />
+      <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400italic' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script type="text/javascript" src="jquery.parallax-scroller.js"></script>
+      <script>
+         $(document).ready(function(){
+             $(".list").parallaxScroller({
+               parallaxSpeed: 0.68,
+               tilt: 0,
+               startPosition: "10%"
+             });
+         });
+         
+      </script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="main">
+            <div class="header">
+               <h3 class="whatif"><br><br><br><br>what if</h3>
+               <div id="slideshow">
+                  <div>
+                     <h1 class="title"><strong>IT WERE DIFFERENT?</strong></h1>
+                  </div>
+                  <div>
+                     <h1 class="title"><strong>THE CIA KILLED JFK?</strong></h1>
+                  </div>
+                  <div>
+                     <h1 class="title"><strong>THE SOVIETS GOT MISSILES TO CUBA?</strong></h1>
+                  </div>
+                  <div>
+                     <h1 class="title"><strong>THE U.S. INVADED JAPAN?</strong></h1>
+                  </div>
+               </div>
+               <h2><strong>AN ALTERNATIVE HISTORY EXPERIENCE</strong></h2>
+               <p class="credit">Created by <a>Brady Africk</a> and <a>Matthew Barrett</a><br><br><br><br><br><br><br></p>
+               <a>SCROLL DOWN TO BEGIN EXPLORING</a>
+            </div>
+            <div class="list">
+               <div class="list-item" data-ps-bg="images/1.jpg">
+                  <h3 class="ps-header"><br>The Bent Bullet<br><br>
+                     <button onClick="location.href='bentbullet.html'" class="btn-primary">Explore Reality</button><br>
+                     <button onClick="location.href='bentbulletalt.html'" class="btn-primary">Explore Alternative History</button><br></center>
+                  </h3>
+               </div>
+               <div class="list-item" data-ps-bg="images/2.jpg">
+                  <h3 class="ps-header" ><br>The Cuban Missile Actuality<br><br>
+                     <button onClick="location.href='cubanmissle.html'" class="btn-primary">Explore Reality</button><br>
+                     <button onClick="location.href='cubanmisslealt.html'" class="btn-primary">Explore Alternative History</button><br>
+                  </h3>
+               </div>
+               <div class="list-item" data-ps-bg="images/3.jpg">
+                  <h3 class="ps-header"><br>Never Dropping The Bomb<br><br>
+                     <button onClick="location.href='thebomb.html'" class="btn-primary">Explore Reality</button><br>
+                     <button onClick="location.href='thebombalt.html'" class="btn-primary">Explore Alternative History</button><br>
+                  </h3>
+               </div>
+            </div>
+         </div>
+         <h6>Coded with ♥ by Brady Africk <br><br> Special thanks to Elizabeth Christofylakis</h6>
+      </div>
+      <script>
+         $("#slideshow > div:gt(0)").hide();
+         
+         setInterval(function() { 
+         $('#slideshow > div:first')
+          .slideUp(2500)
+          .next()
+          .slideDown(2500)
+          .end()
+          .appendTo('#slideshow');
+         },  4500);
+      </script>
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-63295286-1', 'auto');
+         ga('send', 'pageview');
+         
+      </script>
+   </body>
+</html>
