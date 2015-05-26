@@ -1,0 +1,90 @@
+<!doctype html>
+<!--
+   Copyright (©) 2015 Brady Africk
+   	
+   	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+   	
+   	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Credit must be directly given to Brady Africk for the intellelectual property on this website and the code itself, even if modified, as well Pete Rojwongsuriya for authoring the parallax-scroller included with this software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+   -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>The Bent Bullet</title>
+      <meta name="title" content="What it were different? | Alternative History" />
+      <meta name="description" content="A take on history and the ripple effect caused by small, yet pivotal changes" />
+      <link rel="image_src" href="/images/parallax-scroller_image.png" />
+      <meta content="http://whatifitweredifferent.com" property="og:url" />
+      <meta content="http://whatifitweredifferent.com/images/favicon.png" property="og:image" />
+      <link rel="shortcut icon" id="favicon" href="/images/favicon.png">
+      <meta name="author" content="Brady Africk">
+      <link rel="stylesheet" type="text/css" href="altstyleredirect.css" />
+      <link rel="stylesheet" type="text/css" href="css/redirect.css" />      
+      <link rel="canonical" href="http://whatifitweredifferent.com" />
+      <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script type="text/javascript" src="jquery.parallax-scroller.js"></script>
+      <script type="text/javascript" src="typed.js"></script>
+      <style>
+         
+      </style>
+      <script>
+         $(document).ready(function(){
+             $(".list").parallaxScroller({
+               parallaxSpeed: 0.9,
+               tilt: 0,
+               startPosition: "40%"
+             });
+         });
+         
+      </script>
+      
+      <script>
+    $(function(){
+
+        $("#typed").typed({
+            strings: ["<h1>NOVEMBER 22, 1963<br><br>President John F. Kennedy is shot and killed. A ten-month thorough investigation from November 1963 to September 1964 by the Warren Commission concluded that Kennedy was assassinated by Lee Harvey Oswald, acting alone, and that Jack Ruby also acted alone when he killed Oswald before he could stand trial...<br><br> But what if it were different? "],
+            typeSpeed: 30,
+            backDelay: 500,
+            loop: false,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+        $(".reset").click(function(){
+            $("#typed").typed('reset');
+        });
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+
+   </head>
+   <body>
+      <div class="wrapper">
+
+             				<a style="padding-bottom: -200px" href="bentbulletalt.html"><h4><br>Continue to Alternative History</h4></a>
+               <div style="padding: 76px" align="left" id="typed"></div><br><br>
+
+   
+            </div>
+         </div>
+      </div>
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-63295286-1', 'auto');
+         ga('send', 'pageview');
+         
+      </script>
+   </body>
+</html>
