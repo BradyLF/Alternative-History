@@ -24,11 +24,25 @@
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
       <script type="text/javascript" src="jquery.parallax-scroller.js"></script>
       <script type="text/javascript" src="typed.js"></script>
+      <style>
+         
+      </style>
+      <script>
+         $(document).ready(function(){
+             $(".list").parallaxScroller({
+               parallaxSpeed: 0.9,
+               tilt: 0,
+               startPosition: "40%"
+             });
+         });
+         
+      </script>
+      
       <script>
     $(function(){
 
         $("#typed").typed({
-            strings: ["<h1>NOVEMBER 22, 1963<br><br>President John F. Kennedy is shot and killed. A ten-month thorough investigation from November 1963 to September 1964 by the Warren Commission concluded that Kennedy was assassinated by Lee Harvey Oswald, <u>acting alone</u>, and that Jack Ruby also <u>acted alone</u> when he killed Oswald before he could stand trial...<br><br> But what if it were different? "],
+            strings: ["<h1>NOVEMBER 22, 1963<br><br>President John F. Kennedy is shot and killed. A ten-month thorough investigation from November 1963 to September 1964 by the Warren Commission concluded that Kennedy was assassinated by Lee Harvey Oswald, acting alone, and that Jack Ruby also acted alone when he killed Oswald before he could stand trial...<br><br> But what if it were different? "],
             typeSpeed: 16,
             backDelay: 500,
             loop: false,
@@ -53,12 +67,11 @@
 
    </head>
    <body>
-	   <object style="position: absolute; width: 1px; height: 1px;" id="mp3" data="images/type.mp3" type="audio/mpeg"></object>
       <div class="wrapper">
 
-             				<a style="padding-bottom: -200px" href1px"bentbulletalt.html"><h4><br>Continue to Alternative History</h4></a>
+             				<a style="padding-bottom: -200px" href="bentbulletalt.html"><h4><br>Continue to Alternative History</h4></a>
                <div style="padding: 76px" align="left" id="typed"></div><br><br>
-
+<object style="position: absolute; width: 1px; height: 1px;" id="mp3" data="images/type.mp3" type="audio/mpeg"></object>
    
             </div>
          </div>
@@ -75,3 +88,7 @@
       </script>
    </body>
 </html>
+
+
+
+
